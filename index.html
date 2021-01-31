@@ -34,9 +34,33 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3556060086');
       });
     }
+  </script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCSwt5-Ec7B-CFWd7l9MShO7asHsTzWAKc",
+      authDomain: "revenueforesight.firebaseapp.com",
+      projectId: "revenueforesight",
+      storageBucket: "revenueforesight.appspot.com",
+      messagingSenderId: "783431380941",
+      appId: "1:783431380941:web:994920f0a292a2a8851e84",
+      measurementId: "G-XRTWJXP6KY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
