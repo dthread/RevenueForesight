@@ -53375,7 +53375,7 @@ M.Ss.prototype={
 $0:function(){return P.c0([this.a.oL(),B.hB("https://www.revenueforesight.com/blog")],t.Ch)},
 $S:40}
 M.Sw.prototype={
-$0:function(){return P.c0([B.hB(u.L),this.a.bn()],t.Ch)},
+$0:function(){return P.c0([this.a.bn(),B.hB(u.L)],t.Ch)},
 $S:40}
 M.St.prototype={
 $1:function(a){if(a.v(0,C.aH))return C.lC
@@ -53542,7 +53542,7 @@ return P.N($async$bn,r)},
 J:function(a,b){var s=null,r=K.je(4),q=F.q9(C.f5),p=V.a4U(b),o=L.ej("Start Using Revenue Foresight today.",C.l5,s),n=A.yv(s,new V.en(C.cz,t.hE),s,s,s,s,s,new V.dd(new M.RB(),t.xw),new V.en(new V.af(90,32,90,32),t.ut),s,new V.dd(new M.RC(),t.pu),new V.dd(new M.RD(),t.kJ),s,s,s)
 return M.bJ(s,new T.j8(C.aj,s,s,M.bJ(s,T.jl(H.c([new T.bh(new V.af(0,0,0,16),o,s),new T.bh(new V.af(0,32,0,0),U.a7e(L.ej("Get started",C.o1.E0(18),s),new M.RE(this),n),s)],t.Y),C.aG,C.a6,C.aN,s,s,C.aS),C.k,s,new S.aH(0,800,0,1/0),s,s,s,s,s,s,s,s),s),C.k,s,s,new S.d9(C.j,s,q,r,s,s,C.Q),s,s,C.fb,p,s,s,1/0)}}
 M.RE.prototype={
-$0:function(){return P.c0([B.hB(u.L),this.a.bn()],t.Ch)},
+$0:function(){return P.c0([this.a.bn(),B.hB(u.L)],t.Ch)},
 $S:40}
 M.RB.prototype={
 $1:function(a){if(a.v(0,C.aH))return C.lC
