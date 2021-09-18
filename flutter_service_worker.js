@@ -4,19 +4,19 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "84c0f37957e7dbca48da5943c7164c5c",
-"index.html": "e96118e91637bdf3c02b254a38317a7d",
-"/": "e96118e91637bdf3c02b254a38317a7d",
-"main.dart.js": "cc7a4405550068e6564d4cd6b16f1db9",
+"index.html": "ada7531c4d61ca842526c0acb488fa1a",
+"/": "ada7531c4d61ca842526c0acb488fa1a",
+"main.dart.js": "de141b2be567acd1b66c9ae1c70e8cf1",
 "favicon.png": "e45c857ff7f97f18be171a8d61a5725e",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "caa4311dc9662cdd51cded3f6a5aaad6",
-"assets/AssetManifest.json": "0d214286bfaa3d4514490429ed82fa74",
-"assets/NOTICES": "0bfa9499ea777ec348f46b222f3aaf98",
+"assets/AssetManifest.json": "2e3f90fd7efbaef614c9dd5129aebd43",
+"assets/NOTICES": "2158917193f72a69fe180095019e6864",
 "assets/FontManifest.json": "277df259a6b4de0c68481e262c8a9b95",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/assets/images/slide_1-layer_2.png": "ddbf15fa920dae7a5a686ff7d10d4841",
 "assets/assets/images/slide_1-layer_1.png": "9063147efb1e199ff5c150d2e6300aa7",
 "assets/assets/images/icon_ui.png": "09138184ad5cee139e01c3aba95924d4",
@@ -29,12 +29,12 @@ const RESOURCES = {
 "assets/assets/images/icon_development.png": "baebd28f59701e856c98c68e010fdeb2",
 "assets/assets/images/slide_2-layer_1.png": "d74c30d69caf1be60b16532c70e5f9da",
 "assets/assets/images/slide_2-layer_2.png": "9f38f12164b646341c610a77fd6c2e7a",
+"assets/assets/images/CLV%2520presentation-4.png": "e0cdfebe6b62d259b53197bebe0b18b9",
 "assets/assets/images/slide_3-bg.jpg": "4eb412a5e5b66476b4b0ee84b51ce232",
 "assets/assets/images/flutter_logo_text.png": "d21f1eecaeaab081ba7efec1721c0712",
 "assets/assets/images/icon_youtube_64x.png": "155d50c9f10c97fae27575ae7ee7b026",
 "assets/assets/images/news_flutter_1.12.png": "1afef8f0d8e3ba20b49bc5625168b629",
 "assets/assets/images/CLV%2520presentation2-pic.jpg": "56b1b5e8e94232f6d8bbd25451ff7a6c",
-"assets/assets/images/CLV%2520presentation-4.001.png": "e0cdfebe6b62d259b53197bebe0b18b9",
 "assets/assets/images/google_logo.png": "22979cce8fc21c09b7f26e131045a400",
 "assets/assets/images/icon_search_64x.png": "f55e992d786ef1822db8d1c038e201b5",
 "assets/assets/images/device_frame.png": "58e971455388b5c476887bf687a71d8a",
@@ -78,7 +78,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
@@ -204,7 +204,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
