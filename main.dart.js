@@ -65185,7 +65185,7 @@ a7J(a,b){var s=0,r=P.M(t.z),q=this,p,o,n
 var $async$uT=P.I(function(c,d){if(c===1)return P.J(d,r)
 while(true)switch(s){case 0:p=P.rc("https://revenueforesight.com:9002/sendMessage/")
 o=t.bD
-n=P.aD(["Content-Type","application/json; charset=UTF-8"],o,o)
+n=P.aD(["Content-Type","application/json"],o,o)
 s=2
 return P.V(G.aEF(p,C.b6.M8(P.aD(["Email",a,"Message",b],o,o),null),n),$async$uT)
 case 2:if(d.b===200){q.at(new V.a9Q(q))
